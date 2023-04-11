@@ -1,8 +1,8 @@
   const cvs = document.getElementById("tetris");
 const ctx = cvs.getContext("2d");
 
-const scoreElemtent = document.getElementById("score");
-const speedElemente = document.getElementById("speed");
+const scoreElement = document.getElementById("score");
+const speedElement = document.getElementById("speed");
 
 const ROW = 20;
 const COL = 10;
