@@ -9,7 +9,7 @@ function drawBoard(){
 
 
 function drawSquare(y, x, color){
-	 ctx.fillstyle = color;
+	 ctx.fillStyle = color;
 	 ctx.fillRect(x * SQ, y * SQ, SQ, SQ);
 	 
 	 if(color == defaultColor) {
