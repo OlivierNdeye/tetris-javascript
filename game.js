@@ -1,4 +1,4 @@
-  const cvs = document.getElementById("tetris");
+const cvs = document.getElementById("tetris");
 const ctx = cvs.getContext("2d");
 
 const scoreElement = document.getElementById("score");
@@ -7,7 +7,7 @@ const speedElement = document.getElementById("speed");
 const ROW = 20;
 const COL = 10;
 const SQ = 30;
-const defaultColor = "#111111";
+const defaultColor = '#111111';
 const defaultBorder = "rgba(255,255,255,0.1)";
 
 let speed = 500;
@@ -22,8 +22,8 @@ let board = [];
 		}
 	}
 	
-	drawBoard();
-	drop();
+drawBoard();
+drop();
 	
 	const PIECES = [
 		[Z,'red'],
@@ -37,3 +37,5 @@ let board = [];
 	
 	let piece = randomPiece();
 	
+
+document.addEventListener("keydown", CONTROL);
