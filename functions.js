@@ -1,10 +1,11 @@
 function drawBoard(){
-		for(let currentRow = 0; currentRow < ROW; currentRow++) {
+	for(let currentRow = 0; currentRow < ROW; currentRow++) {
 		for(let currentCol = 0; currentCol < COL; currentCol++){
 			const currentSquareColor = board[currentRow][currentCol];
 			drawSquare(currentRow, currentCol, currentSquareColor);
 		}
 	}
+	
 }
 
 
@@ -38,5 +39,27 @@ function drop(){
 	}
 	
 	requestAnimationFrame(drop);
+}
 
+function CONTROL(event){
+	const moveFunctions = {
+		ArrowLeft(){
+			piece.moveLeft();
+			dropStart = Date.now();
+		},
+		ArrowRight(){
+			piece.moveRight();
+			dropStart = Date.now()
+		},
+		ArrowUp(){
+			piece.rotate();
+			dropStart = Date.now();
+		},
+		ArrowDown(){
+			piece.moveDown();
+		}
+	}
+	
+	const movePiece = moveFunctions[event.code];
+	movePiece();
 }
